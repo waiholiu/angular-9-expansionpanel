@@ -16,41 +16,6 @@ export class FirstPageComponent implements OnInit {
 
     this.countArray = Array(100).fill(0).map((x,i)=>i);
 
-    // router.events
-    // .subscribe((event: NavigationStart) => {
-    //   if (event.navigationTrigger === 'popstate') {
-    //     // Perform actions
-    //     console.log('back');
-    //   }
-    // });
-
-    router.events.pipe(
-      map((event: NavigationStart) => {
-      if (event.navigationTrigger === 'popstate') {
-            // Perform actions
-            return 'back'
-          }
-        })
-
-        
-    ).subscribe(x => console.log(x) );
-
-
-    // router.events.pipe(map(event : NavigationStart) => {
-    //   if (event.navigationTrigger === 'popstate') {
-    //     // Perform actions
-    //     return 'back'
-
-
-
-
-    // .subscribe((event: NavigationStart) => {
-    //   if (event.navigationTrigger === 'popstate') {
-    //     // Perform actions
-    //     console.log('back');
-    //   }
-    // });
-
   }
 
 
@@ -58,14 +23,7 @@ export class FirstPageComponent implements OnInit {
 
   ngOnInit() {
 
-    this.countArray = Array(100).fill(0).map((x,i)=>i);
-    // this.route.queryParams
-    //   .subscribe((params) => {
-
-
-    //     this.countArray = Array(100).fill(0).map((x,i)=>i);
-    //   });
-
+   
   }
 
 
